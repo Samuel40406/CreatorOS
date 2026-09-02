@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreatorOS — MVP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-icon">✦</span> CreatorOS</div>
+    <nav>
+      <button class="nav-item active" data-page="inicio">⌂ <span>Início</span></button>
+      <button class="nav-item" data-page="campanhas">◈ <span>Campanhas</span></button>
+      <button class="nav-item" data-page="entregas">✓ <span>Entregas</span></button>
+      <button class="nav-item" data-page="financeiro">R$ <span>Financeiro</span></button>
+      <button class="nav-item" data-page="metricas">↗ <span>Métricas</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="creator-mini"><div class="avatar">JC</div><div><strong>Seu perfil</strong><small>Creator</small></div></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">PAINEL DO CREATOR</p>
+        <h1 id="page-title">Olá! 👋</h1>
+      </div>
+      <button class="primary" id="quick-campaign">＋ Nova campanha</button>
+    </header>
+
+    <section id="app"></section>
+  </main>
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-card">
+      <button class="close" id="close-modal">×</button>
+      <h2 id="modal-title">Nova campanha</h2>
+      <form id="campaign-form">
+        <label>Marca<input name="brand" required placeholder="Ex.: Nike"></label>
+        <label>Campanha<input name="name" required placeholder="Ex.: Lançamento de verão"></label>
+        <div class="form-grid">
+          <label>Valor contratado<input name="value" type="number" min="0" step="0.01" required placeholder="6000"></label>
+          <label>Prazo<input name="deadline" type="date" required></label>
+        </div>
+        <label>Entregas<input name="deliveries" type="number" min="1" value="1" required></label>
+        <button class="primary full" type="submit">Salvar campanha</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
